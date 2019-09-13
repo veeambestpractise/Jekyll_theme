@@ -1,0 +1,154 @@
+//
+// Base element style overrides
+//
+// stylelint-disable selector-no-type, selector-max-type
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: $white;
+  background: $link-color;
+}
+
+html {
+  @include fs-4;
+}
+
+body {
+  font-family: $body-font-family;
+  font-size: inherit;
+  line-height: $body-line-height;
+  color: $body-text-color;
+  background-color: $body-background-color;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+address,
+blockquote,
+dl,
+div,
+fieldset,
+form,
+hr,
+noscript,
+table {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  font-weight: 500;
+  line-height: $body-heading-line-height;
+  color: $body-heading-color;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+
+
+a {
+  color: #00B336;
+  text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration: none;
+  background-image: none;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 1px 1px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.side-bar a {
+  color: #93EA20;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.navigation-list-link.active {
+  color: #ffffff !important;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+code {
+  font-family: $mono-font-family;
+  font-size: 12px;
+  line-height: $body-line-height;
+}
+
+figure {
+  margin: 0;
+}
+
+li {
+  margin: 0.25em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  height: 1px;
+  padding: 0;
+  margin: $sp-6 0;
+  background-color: $border-color;
+  border: 0;
+}
+
+img.veeam_logo_lp,
+img.veeam_logo_slogan_lp {
+  position: absolute;
+    top: 15px;
+    right: 50px;
+    z-index: 101;
+    width: 188.23px;
+    height: 33px
+}
+
+@media screen and (max-width: 739px) {
+  img.veeam_logo_lp,
+  img.veeam_logo_slogan_lp {
+    position: static;
+    margin: 0 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  img.veeam_logo_lp,
+  img.veeam_logo_slogan_lp {
+    position: static;
+      width: 142.59px;
+      height: 25px
+  }
+}

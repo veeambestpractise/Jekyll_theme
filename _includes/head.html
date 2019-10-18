@@ -23,10 +23,10 @@
     <script async src="https://www.google-analytics.com/analytics.js"></script>
   {% endif %}
 
-  {% if site.search_enabled != nil %}
-    <script type="text/javascript" src="https://veeambestpractise.github.io/Veeam_Jekyll_theme/assets/js/vendor/lunr.min.js"></script>
+  {% if site.search_enabled != false %}
+    <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | absolute_url }}"></script>
   {% endif %}
-  <script type="text/javascript" src="https://veeambestpractise.github.io/Veeam_Jekyll_theme/assets/js/just-the-docs.js"></script>
+  <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
